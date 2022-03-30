@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment } from "react";
+import "./App.css";
+
+import ContextApp from "./component/common/Context";
+import InitialData from "./component/common/InitialData";
+import { HeaderComponent, ContentForm, UserFilter } from "./component/Index";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <InitialData>
+        <ContextApp>
+          <HeaderComponent />
+          <UserFilter />
+          <ContentForm />
+        </ContextApp>
+      </InitialData>
+    </Fragment>
   );
 }
 
